@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano</title>
+    <link rel="stylesheet" href="./piano.css">
+</head>
+<body>
+    <article>
+        <div class="page-header">
+            <h1 class="page__title" itemprop="name">
+                피아노 </h1>
+        </div>
+        <div itemprop="articleBody">
+            <div class="page__content">
+                <div id="piano">
+                    <div class="btn-group-piano">
+                        <button class="hideNotes" onclick="hideNotes()">음이름 숨기기</button>
+                        <select id = rangeselection name="selection" onchange="changeRange(this.value)">
+                            <option value="1" >A0~G2</option>
+                            <option value="2" >A1~G3</option>
+                            <option value="3" selected>A2~G4</option>
+                            <option value="4" >A3~G5</option>
+                            <option value="5" >A4~G6</option>
+                            <option value="6" >A5~G7</option>
+                        </select>
+                    </div>
+                    <div class="piano-wrapper">
+                        <div class="piano_rangeinf"><br><br>현재 음역대는 A2에서 G4까지 입니다.<br><br></div>
+                        <ul class="piano">
+                            <li class="key">
+                                <span class="white-key" id="1a"><i>가</i></span>
+                                <span class="black-key" id="1ais"><i><span><span>가</span><span class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♯</span></span><span><span>나</span><span
+                                                class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♭</span></span></i></span>
+                            </li>
+                            <li class="key">
+                                <span class="white-key" id="1b"><i>나</i></span>
+                            </li>
+                            <li class="key">
+                                <span class="white-key" id="1c"><i>다</i></span>
+                                <span class="black-key" id="1cis"><i><span><span>다</span><span
+                                                class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♯</span></span><span><span>라</span><span
+                                                class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♭</span></span></i></span>
+                            </li>
+                            <li class="key">
+                                <span class="white-key" id="1d"><i>라</i></span>
+                                <span class="black-key" id="1dis"><i><span><span>라</span><span class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♯</span></span><span><span>마</span><span
+                                                class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♭</span></span></i></span>
+                            </li>
+                            <li class="key">
+                                <span class="white-key" id="1e"><i>마</i></span>
+                            </li>
+                            <li class="key">
+                                <span class="white-key" id="1f"><i>바</i></span>
+                                <span class="black-key" id="1fis"><i><span><span>바</span><span class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♯</span></span><span><span>사</span><span
+                                                class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♭</span></span></i></span>
+                            </li>
+                            <li class="key">
+                                <span class="white-key" id="1g"><i>사</i></span>
+                                <span class="black-key" id="1gis"><i><span><span>사</span><span class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♯</span></span><span><span>가</span><span
+                                                class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♭</span></span></i></span>
+                            </li>
+                            <li class="key">
+                                <span class="white-key" id="2a"><i>가</i></span>
+                                <span class="black-key" id="2ais"><i><span><span>가</span><span class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♯</span></span><span><span>나</span><span
+                                                class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♭</span></span></i></span>
+                            </li>
+                            <li class="key">
+                                <span class="white-key" id="2b"><i>나</i></span>
+                            </li>
+                            <li class="key">
+                                <span class="white-key" id="2c"><i>다</i></span>
+                                <span class="black-key" id="2cis"><i><span><span>다</span><span class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♯</span></span><span><span>라</span><span
+                                                class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♭</span></span></i></span>
+                            </li>
+                            <li class="key">
+                                <span class="white-key" id="2d"><i>라</i></span>
+                                <span class="black-key" id="2dis"><i><span><span>라</span><span class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♯</span></span><span><span>마</span><span
+                                                class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♭</span></span></i></span>
+                            </li>
+                            <li class="key">
+                                <span class="white-key" id="2e"><i>마</i></span>
+                            </li>
+                            <li class="key">
+                                <span class="white-key" id="2f"><i>바</i></span>
+                                <span class="black-key" id="2fis"><i><span><span>바</span><span class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♯</span></span><span><span>사</span><span
+                                                class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♭</span></span></i></span>
+                            </li>
+                            <li class="key">
+                                <span class="white-key" id="2g"><i>사</i></span>
+                                <span class="black-key" id="2gis"><i><span><span>사</span><span class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♯</span></span><span><span>가</span><span
+                                                class="piano-accidental"
+                                                style="font-family: Arial, Helvetica, sans-serif;">♭</span></span></i></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <script src="./piano.js"></script>
+                <div class="instruction-content">
+                    <h2>Instruction</h2>
+
+                </div>
+    </article>
+</body>
+
+</html>
