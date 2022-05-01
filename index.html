@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Piano</title>
     <link rel="stylesheet" href="./piano.css">
 </head>
+
 <body>
     <article>
         <div class="page-header">
@@ -18,13 +20,13 @@
                 <div id="piano">
                     <div class="btn-group-piano">
                         <button class="hideNotes" onclick="hideNotes()">음이름 숨기기</button>
-                        <select id = rangeselection name="selection" onchange="changeRange(this.value)">
-                            <option value="1" >A0~G2</option>
-                            <option value="2" >A1~G3</option>
+                        <select id=rangeselection name="selection" onchange="changeRange(this.value)">
+                            <option value="1">A0~G2</option>
+                            <option value="2">A1~G3</option>
                             <option value="3" selected>A2~G4</option>
-                            <option value="4" >A3~G5</option>
-                            <option value="5" >A4~G6</option>
-                            <option value="6" >A5~G7</option>
+                            <option value="4">A3~G5</option>
+                            <option value="5">A4~G6</option>
+                            <option value="6">A5~G7</option>
                         </select>
                     </div>
                     <div class="piano-wrapper">
@@ -42,8 +44,7 @@
                             </li>
                             <li class="key">
                                 <span class="white-key" id="1c"><i>다</i></span>
-                                <span class="black-key" id="1cis"><i><span><span>다</span><span
-                                                class="piano-accidental"
+                                <span class="black-key" id="1cis"><i><span><span>다</span><span class="piano-accidental"
                                                 style="font-family: Arial, Helvetica, sans-serif;">♯</span></span><span><span>라</span><span
                                                 class="piano-accidental"
                                                 style="font-family: Arial, Helvetica, sans-serif;">♭</span></span></i></span>
@@ -117,9 +118,182 @@
                     </div>
                 </div>
                 <script src="./piano.js"></script>
+                <br><br><br><br><br>
                 <div class="instruction-content">
                     <h2>Instruction</h2>
-
+                    <pre>
+컴퓨터의 키보드를 이용하거나 피아노의 키를 클릭하여 피아노를 연주 할 수 있습니다.
+아래의 키보드에서 F1~ F6 까지의 Fuction key들로 음역대를 바꿀 수 있으며
+Function key 아래의 키들 중 순서대로 상단의 글자들은 검정건반, 하단의 글자들은 하얀건반입니다.
+                    </pre>
+                    <div style="display: inline-block;">
+                        <button role="keys" type="button" aria-disabled="false"
+                            tabindex="-1"
+                            data-name="ESC"><span
+                                class="ui-keyboard-text">ESC</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="F1 use1"
+                            data-name="F1"><span
+                                class="ui-keyboard-text">F1</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="F2 use1"
+                            data-name="F2"><span
+                                class="ui-keyboard-text">F2</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="F3 use1"
+                            data-name="F3"><span
+                                class="ui-keyboard-text">F3</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="F4 use1"
+                            data-name="F4"><span
+                                class="ui-keyboard-text">F4</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="F5 use1"
+                            data-name="F5"><span
+                                class="ui-keyboard-text">F5</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="F6 use1"
+                            data-name="F6"><span
+                                class="ui-keyboard-text">F6</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="F7"
+                            data-name="F7"><span
+                                class="ui-keyboard-text">F7</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="F8"
+                            data-name="F8"><span
+                                class="ui-keyboard-text">F8</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="F9"
+                            data-name="F9"><span
+                                class="ui-keyboard-text">F9</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="F10" data-name="F10"><span
+                                class="ui-keyboard-text">F10</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="F11" data-name="F11"><span
+                                class="ui-keyboard-text">F11</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="F12" data-name="F12"><span
+                                class="ui-keyboard-text">F12</span></button>
+                            <br
+                            class="ui-keyboard-button-endrow"><button role="keys" type="button" aria-disabled="false"
+                            tabindex="-1" class="`" data-name="`"><span
+                                class="ui-keyboard-text">`</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="1 use2"
+                            data-name="1"><span
+                                class="ui-keyboard-text">1</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="2"
+                            data-name="2"><span
+                                class="ui-keyboard-text">2</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="3 use2"
+                            data-name="3"><span
+                                class="ui-keyboard-text">3</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="4 use2"
+                            data-name="4"><span
+                                class="ui-keyboard-text">4</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="5"
+                            data-name="5"><span
+                                class="ui-keyboard-text">5</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="6 use2"
+                            data-name="6"><span
+                                class="ui-keyboard-text">6</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="7 use2"
+                            data-name="7"><span
+                                class="ui-keyboard-text">7</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="8 use2"
+                            data-name="8"><span
+                                class="ui-keyboard-text">8</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="9"
+                            data-name="9"><span
+                                class="ui-keyboard-text">9</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="0 use2"
+                            data-name="0"><span
+                                class="ui-keyboard-text">0</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="- use2"
+                            data-name="-"><span
+                                class="ui-keyboard-text">-</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="="
+                            data-name="=">=</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="bksp use2" data-name="bksp"
+                            ><span class="ui-keyboard-text">Bksp</span></button><button role="button"
+                            type="button" aria-disabled="false" tabindex="-1"
+                            class="Ins use2" data-name="Ins"><span
+                                class="ui-keyboard-text">Ins</span></button><br
+                            class="ui-keyboard-button-endrow"><button role="keys" type="button" aria-disabled="false"
+                            tabindex="-1"
+                            class="tab use3" data-name="tab"
+                            ><span class="ui-keyboard-text">⇥ Tab</span></button><button role="button"
+                            type="button" aria-disabled="false" tabindex="-1"
+                            class="q use3"
+                            data-name="q"><span
+                                class="ui-keyboard-text">q</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="w use3"
+                            data-name="w"><span
+                                class="ui-keyboard-text">w</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="e use3"
+                            data-name="e"><span
+                                class="ui-keyboard-text">e</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="r use3"
+                            data-name="r"><span
+                                class="ui-keyboard-text">r</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="t use3"
+                            data-name="t"><span
+                                class="ui-keyboard-text">t</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="y use3"
+                            data-name="y"><span
+                                class="ui-keyboard-text">y</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="u use3"
+                            data-name="u"><span
+                                class="ui-keyboard-text">u</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="i use3"
+                            data-name="i"><span
+                                class="ui-keyboard-text">i</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="o use3"
+                            data-name="o"><span
+                                class="ui-keyboard-text">o</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="p use3"
+                            data-name="p"><span
+                                class="ui-keyboard-text">p</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="91 use3"
+                            data-name="["><span
+                                class="ui-keyboard-text">[</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="93 use3"
+                            data-name="]"><span
+                                class="ui-keyboard-text">]</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="92 use3"
+                            data-name="\"><span
+                                class="ui-keyboard-text">\</span></button><button role="keys" type="button"
+                            aria-disabled="false" tabindex="-1"
+                            class="del" data-name="del"
+                            ><span
+                                class="ui-keyboard-text">del</span></button>
+                    </div>
                 </div>
     </article>
 </body>

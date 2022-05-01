@@ -193,3 +193,20 @@ body{
 .key .black-key i>span:last-child {
   padding-top: 10px;
 }
+pre {
+  width: 650px;
+  color : white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.use1{
+  background-color: bisque;
+}
+
+.use2{
+  background-color: aqua;
+}
+
+.use3{
+  background-color: aquamarine;
+}
